@@ -1,0 +1,40 @@
+#barralateralshop {
+    background-color: lightgray;
+    padding: 20px;
+    text-align: center;
+    width: 20%;
+    float: left;
+}
+
+#contenidoshop {
+    width: 75%;
+    float: right;
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#shop1 {
+    width: 30%;
+    height: auto;
+    margin: 20px;
+    box-shadow: 10px 10px 5px grey;
+}
+#shop2 {
+    width: 30%;
+    height: auto;
+    margin: 20px;
+    box-shadow: 10px 10px 5px grey;
+}
+#shop3 {
+    width: 30%;
+    height: auto;
+    margin: 20px;
+    box-shadow: 10px 10px 5px grey;
+}
+iframe {
+    width: 80%;
+    height: 315px;
+    margin: 20px auto;
+}

@@ -1,0 +1,127 @@
+body{
+    font-family: sans-serif;
+    padding: 45px 20px 0;
+}
+#contenido{
+    position: absolute;
+    top: 14%;
+
+}
+
+#piepaginagG2{
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    height: 7%;
+    width: 100%;
+    background-color: #000000;
+    color: #ffffff;
+    text-align: center;
+}
+#g2winner{
+    left: 0%;
+    width: 22%;
+    margin: auto;
+}
+#g2lenovo{
+    left: 22%;
+    width: 22%;
+    margin: auto;
+}
+#g22020{
+    left: 44%;
+    width: 22%;
+    margin: auto;
+}
+#g2valorant{
+    left: 66%;
+    width: 22%;
+    margin: auto;
+}
+#imagenes{
+    text-align: center;
+    margin-bottom: 20px;
+}
+#barraLateral{
+    position: absolute;
+    top: 12%;
+    left: 0;
+    height: 88%;
+    width: 20%;
+    background: rgb(114,234,199);
+    background: linear-gradient(90deg, rgba(114,234,199,1) 0%, rgba(112,231,202,1) 52%, rgba(100,213,211,1) 100%);
+    color: black;
+}
+.equiposLec{
+    text-align: center;
+    padding: 40px;
+}
+#contenidoLEC{
+    position: absolute;
+    top: 12%;
+    left: 20%;
+    height: 81%;
+    width: 80%;
+    background-color: white;
+    color: black;
+    overflow: auto;
+}
+#textolec{
+    margin-left: 20px;
+}
+#titulojuegos {
+    position: absolute;
+    top: 18%;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+#lol{
+ text-align: center;
+ width: 20%;
+ margin: 25px;
+}
+#csgo{
+ text-align: center;
+ width: 20%;
+  margin: 25px;
+}
+#apex{
+ text-align: center;
+ width: 20%;
+  margin: 25px;
+}
+#valorant{
+ text-align: center;
+ width: 20%;
+  margin: 25px;
+}
+#rain{
+ text-align: center;
+ width: 20%;
+  margin: 25px;
+}
+#rocket{
+ text-align: center;
+ width: 20%;
+  margin: 25px;
+}
+#contenidoJugadore{
+    position: absolute;
+    top: 22%;
+    left: 8%;
+    height: 80%;
+    width: 80%;
+    background-color: white;
+    color: black;
+    overflow: auto;
+}
+.name{
+    display: flex;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: 0 80px;
+}
+.name-jug{
+    text-decoration: none;
+}

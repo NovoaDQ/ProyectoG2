@@ -1,0 +1,48 @@
+form {
+  width: 50%;
+  margin: 12% auto 0 auto;
+  text-align: left;
+  padding: 20px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  background: linear-gradient(to bottom, red, black);
+}
+
+label, input[type="submit"] {
+  display: block;
+  margin-bottom: 10px;
+}
+
+label {
+  font-weight: bold;
+  color: white;
+}
+
+input[type="text"], input[type="number"], textarea {
+  width: 100%;
+  padding: 5px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid gray;
+  margin-bottom: 20px;
+  color: white;
+}
+
+input[type="submit"] {
+  background-color: white;
+  color: black;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: lightgray;
+}
+#videoform {
+  display: block;
+  margin: 0 auto;
+  width: 560px;
+  height: 315px;
+}
