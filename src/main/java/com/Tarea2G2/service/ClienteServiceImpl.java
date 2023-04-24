@@ -1,26 +1,19 @@
 package com.Tarea2G2.service;
 
-
-
 import com.Tarea2G2.domain.Cliente;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-/**
- *
- * @author manul
- */
 @Service
-public class ClienteSeviceImp implements ClienteService {
+public class ClienteServiceImpl implements ClienteService {
 
     @Autowired
     ClienteDao clienteDao;
-    
 
     @Override
-    @Transactional(readOnly = true) // para manejar transacciones de solo lectura
+    @Transactional(readOnly = true) 
     public List<Cliente> getClientes() {
         return (List<Cliente>) clienteDao.findAll();
     }
@@ -49,7 +42,13 @@ public class ClienteSeviceImp implements ClienteService {
 
     @Override
     public List<Cliente> getClienteNombre(String nombre) {
-         return (List<Cliente>) clienteDao.findByNombre(nombre);
+        return (List<Cliente>) clienteDao.findByNombre(nombre);
+    }
+
+    @Override
+    @Transactional
+    public void save(Cliente cliente) {
+        clienteDao.save(cliente);
     }
 
 }
