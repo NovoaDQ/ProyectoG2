@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://wwww.thymeleaf.org" >
+     <head th:replace="layout/plantilla :: head">
+        <title th:text="#{menu.novedades}">Novedades</title>
+    </head>
+    <body>
+        <header th:replace="layout/plantilla :: header"/>
+        <section id="contenido">
+            <h2><center>Últimas Noticias de G2 Esports</center></h2>
+            <br/>
+            <br/>
+            <br/>
+            <!--Aqui va la parte admin para agregar noticias--> 
+            <article class="noticia">
+                <h3>G2 Esports gana el Campeonato de la LEC</h3>
+                <p>G2 Esports se ha proclamado campeón de la LEC después de vencer a su rival en la final. La victoria viene después de meses de arduo trabajo y dedicación por parte de todo el equipo. ¡Felicidades a G2 Esports!</p>
+                <img src="imagenes/g2win.jpg" alt="G2 Esports gana el Campeonato de la LEC"/>
+            </article>
+            <br/>
+            <br/>
+            <br/>
+            <article class="noticia">
+                <h3>G2 Esports anuncia su nuevo jugador</h3>
+                <p>G2 Esports ha anunciado la adición de un nuevo jugador a su equipo. Con su experiencia y habilidades, se espera que este jugador fortalezca aún más el equipo. ¡Bienvenido al equipo!</p>
+                <img src="imagenes/G2-Yike-LEC-2023.jpg" alt="G2 Esports anuncia su nuevo jugador"/>               
+            </article>
+        </section>
+
+    </body>
+</html>
