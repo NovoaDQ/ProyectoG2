@@ -1,16 +1,33 @@
 <!DOCTYPE html>
 <html lang="es">
     <head>
-        <title>G2 Shop</title>
+        <title>G2 Login</title>
         <meta charset="UTF-8">
         <meta name="description" content="Tarea 2" />
         <meta name="keywords" content="html5, css, web, fidelitas" />
         <link href="estilosG2/estiloG2.css" rel="stylesheet" type="text/css"/>
         <link href="estilosG2/menu.css" rel="stylesheet" type="text/css"/>
         <link href="estilosG2/shopestylo.css" rel="stylesheet" type="text/css"/>
+        <script>
+            function validar(){
+                var usuario = document.getElementById("usuario").value;
+                var contrasena = document.getElementById("contrasena").value;
+                if(usuario == ""){
+                    alert("Debe ingresar un usuario");
+                    return false;
+                }
+                else if(contrasena == ""){
+                    alert("Debe ingresar una contraseña");
+                    return false;
+                }
+                else{
+                    return true;
+                }
+            }
+        </script>
     </head>
     <body>
-       <header class="header">
+        <header class="header">
             <nav class="nav">
                 <a href="index.html" id="g2imagentotal" class="logo nav-link">                   
                     <img id="g2imagen" src="imagenes/g2.png" alt="G2 Esports"/>
@@ -27,31 +44,14 @@
             </nav>
         </header> 
         <section id="contenido">
-        </head>
-        <body>
-            <aside id="barralateralshop">
-                G2 ESPORTS
-                NEWEST ITEMS
-                Game mad on and off the server
-            </aside>
-            <section id="contenidoshop">
-                <figure>
-                    <img id="shop1" src="imagenes/shop/bluetshit.png" alt=""/>
-                    <figcaption>G2 ESPORTS - Pro Kit 2023 - Jersey - ROCKET LEAGUE<br/>
-                        €70,00</figcaption>
-                </figure>
-                <figure>
-                    <img id="shop2" src="imagenes/shop/greentshit.png" alt=""/>
-                    <figcaption>G2 ESPORTS - Pro Kit 2023 - Jersey - RAINBOW SIX <br/>
-                        €70,00</figcaption>
-                </figure>
-                <figure>
-                    <img id="shop3" src="imagenes/shop/whitetshirt.png" alt=""/>
-                    <figcaption>G2 ESPORTS - Pro Kit 2023 - Jersey - SIM RACING <br/>
-                        €70,00</figcaption>
-                </figure>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/bOZmvGdEshY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            </section>
-    </section>
-</body>
+            <div class="container">
+                <form onsubmit="return validar()">
+                    <h2>Login</h2>
+                    <input type="text" id="usuario" name="usuario" placeholder="Usuario">
+                    <input type="password" id="contrasena" name="contrasena" placeholder="Contraseña">
+                    <input type="submit" value="Iniciar Sesión">
+                </form>
+            </div>
+        </section>
+    </body>
 </html>
