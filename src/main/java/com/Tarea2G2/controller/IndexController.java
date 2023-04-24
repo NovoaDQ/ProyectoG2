@@ -12,7 +12,6 @@ public class IndexController {
 
     @Autowired
 
-
     @GetMapping("/")
     public String index() {
         return "index";
