@@ -4,18 +4,19 @@
  */
 package com.Tarea2G2.service;
 
+import com.Tarea2G2.domain.Cliente;
+import java.util.List;
+import org.springframework.data.repository.CrudRepository;
+
 /**
  *
  * @author manul
  */
-class ClienteDao {
-
-    Object findById(Long idCliente) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    void deleteById(Long idCliente) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
+public interface ClienteDao extends CrudRepository<Cliente, Long>{
     
+    List<Cliente> findByCorreo(String correo);
+    
+    List<Cliente> findByNombreOrApellidos(String nombre, String apellidos);
+    
+    List<Cliente> findByNombre(String nombre);
 }
