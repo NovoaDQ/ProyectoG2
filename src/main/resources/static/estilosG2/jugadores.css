@@ -31,6 +31,42 @@
     border: 1px solid black;
 }
 
+#JKnaps {
+    width: 200px;
+    margin: 10px;
+    border: 1px solid black;
+}
+
+#Atomic {
+    width: 200px;
+    margin: 10px;
+    border: 1px solid black;
+}
+
+#Chicago {
+    width: 200px;
+    margin: 10px;
+    border: 1px solid black;
+}
+
+#ChaoticMuch {
+    width: 200px;
+    margin: 10px;
+    border: 1px solid black;
+}
+
+#Dezignful {
+    width: 200px;
+    margin: 10px;
+    border: 1px solid black;
+}
+
+#Bixle {
+    width: 200px;
+    margin: 10px;
+    border: 1px solid black;
+}
+
 p {
     text-align: center;
     font-size: 18px;
