@@ -14,8 +14,10 @@
         <header th:fragment="header" class="header">
             <nav class="navbar navbar-expand-sm navbar-dark bg-dark p-0">
                 <div class="container">
-                    <a th:href="@{/}" id="g2imagentotal" class="navbar-brand">
-                        <img id="g2imagen" src="imagenes/g2.png" alt="G2 Esports"/>
+                    <a th:href="@{/}" id="g2imagentotal" class="navbar-brand mr-auto">
+                        <div class="d-flex">
+                            <img id="g2imagen2" src="/imagenes/G2_Esportslogo_square.png" alt="G2 Esports" width="100">
+                        </div>
                     </a>
                     <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                         <span class="navbar-toggler-icon"></span>
@@ -34,53 +36,53 @@
                                 <a th:href="@{/articulo/listado}" class="nav-menu-link nav-link"
                                    th:text="#{menu.equipos}">Equipos</a>
                             </li>
-                             <li class="nav-item px-2">
-                                <a th:href="@{/articulo/listado}" class="nav-menu-link nav-link"
+                            <li class="nav-item px-2">
+                                <a th:href="@{/bootcamp}" class="nav-menu-link nav-link"
                                    th:text="#{menu.bootcamp}">Bootcamp</a>
                             </li>
-                             <li class="nav-item px-2">
+                            <li class="nav-item px-2">
                                 <a th:href="@{/articulo/listado}" class="nav-menu-link nav-link"
                                    th:text="#{menu.sobre_nosotros}">About Us</a>
                             </li>
                         </ul>
-<!--                        <ul sec:authorize="isAuthenticated()" class="navbar-nav m1-auto">
-                            <li class="nav-item mr-3">
-                                <a href="#" class="nav-link">
-                                    <i class="fas fa-user"></i>
-                                    <span th:text="#{plantilla.bienvenido}">Bienvenido:</span>
-                                    <span sec:authentication="name">Usuario</span>
-                                </a>
-                            </li>
-                            <li class="nav-item mr-3">
-                                <a href="#" class="nav-link">
-                                    <span th:text="#{plantilla.troles}">Roles:</span>
-                                    <span sec:authentication="principal.authorities">XXX</span>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <form method="POST" th:action="@{/logout}">
-                                    <a href="#" onclick="this.parentNode.submit();" class="nav-link">
-                                        <i class="fas fa-user-times"></i>[[#{plantilla.logout}]]
-                                    </a>
-                                </form>
-                            </li>
-                        </ul>-->
+                        <!--                        <ul sec:authorize="isAuthenticated()" class="navbar-nav m1-auto">
+                                                    <li class="nav-item mr-3">
+                                                        <a href="#" class="nav-link">
+                                                            <i class="fas fa-user"></i>
+                                                            <span th:text="#{plantilla.bienvenido}">Bienvenido:</span>
+                                                            <span sec:authentication="name">Usuario</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="nav-item mr-3">
+                                                        <a href="#" class="nav-link">
+                                                            <span th:text="#{plantilla.troles}">Roles:</span>
+                                                            <span sec:authentication="principal.authorities">XXX</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <form method="POST" th:action="@{/logout}">
+                                                            <a href="#" onclick="this.parentNode.submit();" class="nav-link">
+                                                                <i class="fas fa-user-times"></i>[[#{plantilla.logout}]]
+                                                            </a>
+                                                        </form>
+                                                    </li>
+                                                </ul>-->
                     </div>
                 </div>
             </nav>
-            <section id="main-header" class="py-2 bg-success text-white">
+            <section id="main-header" class="py-1 bg-danger text-white">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-6">
                             <h1>
-                                <i class="fas fa-cog"></i> [[#{pagina.titulo}]]
+                                [[#{pagina.titulo}]]
                             </h1>
                         </div>
                     </div>
                 </div>
             </section>
         </header>
-        <footer th:fragment="footer" class="position-fixed bottom-0 start-0 end-0 bg-info text-white mt-5 p-2">
+        <footer th:fragment="footer" class="position-fixed bottom-0 start-0 end-0 bg-dark text-white mt-5 p-2">
             <div class="container">
                 <div class="col">
                     <p class="lead text-center">

@@ -7,7 +7,8 @@ body{
     padding: 45px 20px 0;
 }
 #g2imagen {
-    height: 120px;
+    max-width: 100px;
+    max-height: 100px;   
     margin: 0;
     line-height: 0;
 }

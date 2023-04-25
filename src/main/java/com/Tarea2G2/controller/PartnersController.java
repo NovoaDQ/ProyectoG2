@@ -4,12 +4,14 @@
  */
 package com.Tarea2G2.controller;
 
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
 /**
  *
  * @author manul
  */
+@Controller
 public class PartnersController {
 
     @GetMapping("/partners")

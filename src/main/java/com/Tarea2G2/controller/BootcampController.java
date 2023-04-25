@@ -6,18 +6,16 @@ package com.Tarea2G2.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.servlet.ModelAndView;
 
 /**
  *
  * @author manul
  */
 @Controller
-public class JugadoresController {
+public class BootcampController {
 
-    @GetMapping(value = "/jugadores")
-    public ModelAndView jugadoresPage() {
-        ModelAndView mav = new ModelAndView("jugadores");
-        return mav;
+    @GetMapping("/bootcamp")
+    public String bootcamp() {
+        return "bootcamp";
     }
 }
