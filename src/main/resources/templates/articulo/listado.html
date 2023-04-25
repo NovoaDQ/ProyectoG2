@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/xhtml">
+    <head th:replace="layout/plantilla :: head">
+        <title>G2 Shop</title>
+    </head>
+    <body>
+        <header th:replace="layout/plantilla :: header"/>
+        <div class="contenido">
+            <h2 th:text="#{shop.lista}">Listado de Articulos</h2>
+            <a th:href="@{/articulo/nuevo}" sec:authorize="hasRole('ROLE_ADMIN')" th:text="#{shop.nuevo}">Nuevo Articulo</a>
+            <div th:if="${articulo != null and !articulo.empty}">
+                <table border="1">
+                    <thead>
+                        <tr>
+                            <th th:text="#{shop.descripcion}">Descripcion</th>
+                            <th th:text="#{shop.precio}">Precio</th>
+                            <th th:text="#{shop.existencias}">Existencias</th>
+                            <th th:text="#{shop.activo}">Activa</th>                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr th:each="articulo : ${articulos}">
+                            <td thtext="${articulo.descripcion}"></td>
+                            <td thtext="${#numbers.formatDecimal(articulo.precio,3,2)}"style="text-align: right"></td>
+                            <td thtext="${articulo.existencias}"style="text-align: center"></td>
+                            <td><input type="checkbox" name="activa" th:checked="${articulo.activo}" disable="true"></td>
+                            <td><a th:href="@{/articulo/modificar/} + ${articulo.idArticulo}" 
+                                                                         th:text="#{pagina.actualizar}">Modificar</a></td>
+<!--                            <td sec:authorize="hasRole('ROLE_ADMIN')"><a th:href="@{/articulo/modificar/} + ${articulo.idArticulo}" 
+                                                                         th:text="#{pagina.actualizar}">Modificar</a></td>-->
+                            <td><a th:href="@{/articulo/eliminar/} + ${articulo.idArticulo}"
+                                   th:text="#{pagina.eliminar}">Eliminar</a></td>
+                            <!--                            <td sec:authorize="hasRole('ROLE_ADMIN')"><a th:href="@{/articulo/eliminar/} + ${articulo.idArticulo}"
+                                                               th:text="#{pagina.eliminar}">Eliminar</a></td>-->
+                        </tr>
+                    </tbody>
+                </table>                   
+            </div>
+            <div th:if="${articulos == null or articulos.empty}">
+                <p th:text="#{articulo.no_mostrar}">No tenemos articulos que mostrar ... </p>               
+            </div>
+        </div>
+        <footer th:replace="layout/plantilla :: footer"/>
+    </body>
+</html>
+

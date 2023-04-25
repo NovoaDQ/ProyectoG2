@@ -1,13 +1,5 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.Tarea2G2.service;
 
-/**
- *
- * @author diego
- */
 import com.Tarea2G2.dao.ArticuloDao;
 import com.Tarea2G2.domain.Articulo;
 
@@ -16,12 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-/**
- *
- * @author manul
- */
 @Service
-public class ArticuloServiceImpl implements ArticuloService {
+public class ArticuloSeviceImpl implements ArticuloService {
 
     @Autowired
     ArticuloDao articuloDao;
@@ -29,9 +17,9 @@ public class ArticuloServiceImpl implements ArticuloService {
     @Override
     @Transactional(readOnly = true) // para manejar transacciones de solo lectura
     public List<Articulo> getArticulos(boolean activos) {
-        var lista = (List<Articulo>) articuloDao.findAll();
-
-        if (activos) {
+        var lista = (List<Articulo>)articuloDao.findAll();
+        
+        if(activos){
             lista.removeIf(e -> !e.isActivo());
         }
         return lista;
@@ -55,12 +43,4 @@ public class ArticuloServiceImpl implements ArticuloService {
         articuloDao.deleteById(articulo.getIdArticulo());
     }
 
-    public List<Articulo> getArticulo(boolean activos) {
-        var lista = (List<Articulo>) articuloDao.findAll();
-
-        if (activos) {
-            lista.removeIf(e -> !e.isActivo());
-        }
-        return lista;
-    }
 }
