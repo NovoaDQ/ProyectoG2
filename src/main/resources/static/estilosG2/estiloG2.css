@@ -125,3 +125,11 @@ body{
 .name-jug{
     text-decoration: none;
 }
+
+#partners {
+    position: absolute;
+    top: 18%;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
