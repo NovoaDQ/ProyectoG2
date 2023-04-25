@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head th:replace="layout/plantilla :: head">
+        <title th:text="#{menu.novedades}">G2novedades</title>
+    </head>
+    <body>
+        <header th:replace="layout/plantilla :: header"/>
+        <section id="contenido">
+            <h2>Últimas Noticias de G2 Esports</h2>
+            <br/>
+            <br/>
+            <br/>
+            <!--<section class="py-4 mb-4 bg-light"
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3" sec:authorize="hasRole('ROLE_ADMIN')">
+                        <button 
+                            type="button" 
+                            class="btn btn-primary btn-block" 
+                            data-bs-toggle="modal" 
+                            data-bs-target="#agregarCliente">
+                            <i class="fas fa-plus"></i> [[#{accion.agregar}]]
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>>-->
+            <article class="noticia">
+                <h3>G2 Esports gana el Campeonato de la LEC</h3>
+                <p>G2 Esports se ha proclamado campeón de la LEC después de vencer a su rival en la final. La victoria viene después de meses de arduo trabajo y dedicación por parte de todo el equipo. ¡Felicidades a G2 Esports!</p>
+                <img src="imagenes/g2win.jpg" alt="G2 Esports gana el Campeonato de la LEC"/>
+            </article>
+            <br/>
+            <br/>
+            <br/>
+            <article class="noticia">
+                <h3>G2 Esports anuncia su nuevo jugador</h3>
+                <p>G2 Esports ha anunciado la adición de un nuevo jugador a su equipo. Con su experiencia y habilidades, se espera que este jugador fortalezca aún más el equipo. ¡Bienvenido al equipo!</p>
+                <img src="imagenes/G2-Yike-LEC-2023.jpg" alt="G2 Esports anuncia su nuevo jugador"/>               
+            </article>
+        </section>
+
+    </body>
+</html>

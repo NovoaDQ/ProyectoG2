@@ -16,6 +16,7 @@ public class NovedadesController {
 
     @GetMapping("/news/listado")
     public String novedades() {
-        return "novedades";
+        return "news";
     }
+    
 }
