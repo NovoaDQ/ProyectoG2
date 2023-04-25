@@ -26,7 +26,6 @@ public class ArticuloServiceImpl implements ArticuloService {
     @Autowired
     ArticuloDao articuloDao;
 
-    
     @Override
     @Transactional(readOnly = true) // para manejar transacciones de solo lectura
     public List<Articulo> getArticulos(boolean activos) {
@@ -56,9 +55,12 @@ public class ArticuloServiceImpl implements ArticuloService {
         articuloDao.deleteById(articulo.getIdArticulo());
     }
 
-    @Override
     public List<Articulo> getArticulo(boolean activos) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
+        var lista = (List<Articulo>) articuloDao.findAll();
 
+        if (activos) {
+            lista.removeIf(e -> !e.isActivo());
+        }
+        return lista;
+    }
 }
